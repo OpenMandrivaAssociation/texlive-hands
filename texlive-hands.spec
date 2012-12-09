@@ -48,3 +48,17 @@ MetaFont source.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20081005-2
++ Revision: 752458
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20081005-1
++ Revision: 718596
+- texlive-hands
+- texlive-hands
+- texlive-hands
+- texlive-hands
+
