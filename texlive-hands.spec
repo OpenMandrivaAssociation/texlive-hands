@@ -5,8 +5,8 @@
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-hands
-Version:	20081005
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	Pointing hand font
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/hands
