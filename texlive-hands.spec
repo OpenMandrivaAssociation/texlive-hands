@@ -1,6 +1,6 @@
 Name:		texlive-hands
 Version:	13293
-Release:	1
+Release:	2
 Summary:	Pointing hand font
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/hands
