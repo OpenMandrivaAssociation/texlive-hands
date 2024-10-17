@@ -3,7 +3,7 @@ Version:	13293
 Release:	2
 Summary:	Pointing hand font
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/hands
+URL:		https://www.ctan.org/tex-archive/fonts/hands
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hands.r%{version}.tar.xz
 BuildArch:	noarch
