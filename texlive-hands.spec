@@ -1,44 +1,19 @@
-Name:		texlive-hands
-Version:	13293
-Release:	2
+%global tl_name hands
+%global tl_revision 13293
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	Pointing hand font
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/fonts/hands
-License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hands.r%{version}.tar.xz
+License:	pd
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/hands.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Provides right- and left-pointing hands in both black-on-white
-and white-on-black realisation. The font is distributed as
-MetaFont source.
+Provides right- and left-pointing hands in both black-on-white and
+white-on-black realisation. The font is distributed as Metafont source.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/fonts/source/public/hands/hands.mf
-%{_texmfdistdir}/fonts/source/public/hands/handsdef.mf
-%{_texmfdistdir}/fonts/source/public/hands/mirror.mf
-%{_texmfdistdir}/fonts/source/public/hands/reverse.mf
-%{_texmfdistdir}/fonts/source/public/hands/rvmirror.mf
-%{_texmfdistdir}/fonts/tfm/public/hands/hands.tfm
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts %{buildroot}%{_texmfdistdir}
